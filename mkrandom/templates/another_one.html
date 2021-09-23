@@ -1,0 +1,84 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{%static 'css/homestyle.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="containercss">
+      <div class='box'>
+    	  <div class='content'>
+          <span class="homebutton">
+          <a class="home" href="{%url 'main:home'%}"><img src="https://www.pngkey.com/png/full/8-88353_mario-bros-castle-png.png" alt=""></a>
+          </span>
+          <div class="secondrandomizer">
+            <div class="container-lg">
+              <h4 class="text big subtitle">And today's pick will be...</h4>
+              <br>
+              <div class="lakitu">
+                <img class="lakitu_img" src="https://upload.wikimedia.org/wikipedia/en/2/2d/Lakitu.png" alt="">
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <div class="box-random b">
+                <div class="container-lg white b">
+                  <div class="row justify-content-around">
+                    <div class="col rightborder">
+                      <div class="car b">
+                        <img src="{{compo.veh.image_url}}" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <p class="text legend">{{compo.veh.name}}</p>
+                      </div>
+                    </div>
+
+                    <div class="col leftborder rightborder">
+                      <div class="character b">
+                        <img src="{{compo.char.image_url}}" alt="">
+                        <br>
+                        <br>
+                        <p class="text legend">{{compo.char.name}}</p>
+                      </div>
+                    </div>
+                    <div class="col leftborder rightborder">
+                      <div class="tire b">
+                        <img src="{{compo.tire.image_url}}" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <p class="text legend">{{compo.tire.name}}</p>
+                      </div>
+                    </div>
+
+                    <div class="col leftborder">
+                      <div class="glider b">
+                        <img src="{{compo.glider.image_url}}" alt="">
+                        <br>
+                        <br>
+                        <br>
+                        <p class="text legend">{{compo.glider.name}}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reload">
+                    <a href="{%url 'main:another_one'%}"><img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/55f3dd1cb4e139f.png" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

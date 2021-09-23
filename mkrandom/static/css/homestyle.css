@@ -1,0 +1,216 @@
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100%;
+  overflow-y: hidden;
+  height: 100vh;
+  width:100vw;
+  margin: 0;
+  padding: 0;
+  background-color:#000;
+}
+.containercss{
+
+  height: 100vw;
+  background: pink;
+  max-height: 100vh;
+  max-width: 199vh;
+  margin: auto;
+  position: absolute;
+  top:0;bottom:0;
+  left:0;right:0;
+}
+
+.box{
+	position: relative;
+	height: 100%;
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.content{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  background: url("https://raw.githubusercontent.com/jsgalvish/css-mario-kart-animation/master/img/background.png") ;
+  animation: displace 100s linear infinite;
+  background-size:cover;
+  z-index: 0;
+}
+
+
+@keyframes displace
+{
+  0%   { background-position:  0%; }
+  100% { background-position:  -10000px ;}
+}
+
+.play{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:-500px;
+  margin-bottom:1000px;
+  width: 500px;
+  transition:transform 1s cubic-bezier(0.54, 0.07, 0.82, 0.53);
+}
+
+.play img{
+  margin-left: auto;
+  margin-right: auto;
+	display: block;
+  width:70%;
+  height:auto;
+}
+
+.mario{
+  display: block;
+  margin-top:600px;
+  width: 300px;
+  transition: transform 5s cubic-bezier(0.54, 0.07, 0.82, 0.53);
+}
+
+.mario_img{
+  margin-left:100px;
+  width:100%;
+  height:auto;
+}
+.playbox{
+  display:none;
+}
+.playbox:checked ~.mario{
+  transform: translateX(10000%);
+}
+.playbox:checked ~.play{
+  transform:translateY(-1000%);
+}
+.playbox:checked ~.title{
+  transform:translateY(-1000%);
+}
+.big{
+  font-size: 3rem;
+}
+.text{
+  font-family: 'Press Start 2P', cursive;
+}
+.title{
+  margin-top:200px;
+  text-align:center;
+  margin-bottom:-300px;
+  transition:transform 0.5s cubic-bezier(0.54, 0.07, 0.82, 0.53);
+}
+.subtitle{
+  margin-bottom:-80px;
+}
+.randomizer{
+  margin-top:10000px;
+  text-align:center;
+  transition:transform 3s;
+}
+.lakitu{
+  position:absolute;
+  z-index: 1;
+  width:240px;
+  margin-left:900px;
+}
+.lakitu_img{
+  width:100%;
+  height:auto;
+}
+.box-random{
+  display:block;
+  border-radius:40px;
+  background-image: url("https://img.freepik.com/vecteurs-libre/illustration-vectorielle-fond-metal-texture-bleue_46250-104.jpg?size=626&ext=jpg");
+  /*background-color: #dedede;*/
+  margin:auto;
+  max-width:960px;
+  padding:2% 2% 1% 2%;
+}
+.white{
+  background-color: #f0f0f0;
+  border-radius:40px;
+  padding-bottom: 0px;
+}
+.playbox:checked ~.randomizer{
+  transform:translateY(-10600px);
+}
+.car{
+  margin:auto;
+  margin-top:100px;
+  display:block;
+  width:200px;
+}
+.car img{
+  text-align:center;
+  margin:auto;
+  width:100%;
+  height:auto;
+}
+.character{
+  margin:auto;
+  margin-top:50px;
+  display:block;
+  width:150px;
+}
+.character img{
+  text-align:center;
+  margin:auto;
+  margin-top:20px;
+  width:100%;
+  height:auto;
+}
+.tire{
+  margin:auto;
+  margin-top:90px;
+  display:block;
+  width:200px;
+}
+.tire img{
+  text-align:center;
+  margin:auto;
+  width:100%;
+  height:auto;
+}
+.glider{
+  margin:auto;
+  margin-top:80px;
+  display:block;
+  width:200px;
+}
+.glider img{
+  text-align:center;
+  margin:auto;
+  width:100%;
+  height:auto;
+}
+.leftborder{
+  border-left:3px solid #e0e0e0;
+}
+.rightborder{
+  border-right:3px solid #e0e0e0;
+}
+.b{
+}
+.legend{
+  color:#2d6c9c ;
+}
+.secondrandomizer{
+  margin-top:100px;
+  text-align:center;
+}
+.homebutton{
+  margin-left:20px;
+  margin-top:10px;
+  display:table;
+  width:50px;
+  height:auto;
+}
+.homebutton img{
+  width:50px;
+  height:auto;
+}
